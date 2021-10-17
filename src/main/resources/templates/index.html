@@ -1,0 +1,27 @@
+
+<!--Это html-файл, благодаря которому в браузере что-то отображается -->
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> Автор</th>
+        <th> Наименование</th>
+        <th> Кол-во страниц</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book : ${books}">
+        <td><span th:text="${book.author}"> Автор </span></td>
+        <td><span th:text="${book.name}"> Название </span></td>
+        <td><span th:text="${book.pageCount}"> Кол-во стараниц </span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
